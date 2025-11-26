@@ -1,0 +1,317 @@
+/* ---------- BASIC RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- BODY STYLING ---------- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #f9fafb;
+}
+
+/* ---------- HEADER & NAVIGATION ---------- */
+header {
+    background-color: white;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+nav {
+    display: flex;                /* Flexbox - items in a row */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6366f1;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;                /* Flexbox - nav items in a row */
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1f2937;
+}
+
+/* HOVER EFFECT - link changes color when mouse hovers */
+nav a:hover {
+    color: #6366f1;
+}
+
+/* ---------- ALL SECTIONS ---------- */
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1f2937;
+}
+
+/* ---------- HERO/HOME SECTION ---------- */
+.hero {
+    text-align: center;
+    padding-top: 150px;
+    background: linear-gradient(135deg, #f9fafb, #e0e7ff);
+    min-height: 100vh;
+}
+
+.hero img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;           /* Makes image circular */
+    margin-bottom: 20px;
+    object-fit: cover;            /* Keeps image proportions */
+    border: 4px solid #6366f1;    /* Purple border */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #1f2937;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #6366f1;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+/* ---------- BUTTON STYLING ---------- */
+.btn {
+    display: inline-block;
+    background-color: #6366f1;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* HOVER EFFECT - button gets darker when mouse hovers */
+.btn:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);  /* Button moves up slightly */
+}
+
+/* ---------- ABOUT SECTION ---------- */
+#about {
+    background-color: white;
+}
+
+.about-content {
+    display: flex;                /* Flexbox - image and text side by side */
+    gap: 40px;
+    align-items: center;
+}
+
+.about-content img {
+    width: 300px;
+    border-radius: 10px;
+    background-color: #e0e7ff;
+}
+
+.about-content ul {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.about-content li {
+    margin: 10px 0;
+}
+
+/* ---------- SKILLS SECTION ---------- */
+#skills {
+    background-color: #f9fafb;
+}
+
+.skills-grid {
+    display: grid;                        /* CSS Grid - 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* HOVER EFFECT - card lifts up when mouse hovers */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.skill-card h3 {
+    color: #6366f1;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Skill progress bar */
+.skill-bar {
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+}
+
+.skill-bar div {
+    height: 100%;
+    background-color: #10b981;    /* Green color */
+    border-radius: 4px;
+}
+
+/* ---------- PROJECTS SECTION ---------- */
+#projects {
+    background-color: white;
+}
+
+.projects-grid {
+    display: grid;                        /* CSS Grid - 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #f9fafb;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* HOVER EFFECT - card lifts up when mouse hovers */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 15px 15px 5px;
+    color: #1f2937;
+}
+
+.project-card p {
+    padding: 0 15px 15px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ---------- CONTACT SECTION ---------- */
+#contact {
+    background-color: #f9fafb;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Focus effect - border changes color when typing */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+form .btn {
+    width: 100%;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   Makes website look good on smaller screens
+   ============================================ */
+
+/* Tablet screens (less than 768px wide) */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;            /* Hide menu on mobile */
+    }
+
+    .about-content {
+        flex-direction: column;   /* Stack items vertically */
+        text-align: center;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;  /* Single column on mobile */
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
